@@ -13,9 +13,9 @@ const Timeline = props => {
   };
 
   return (
-    <SafeAreaView style={{ margin: 16 }}>
+    <SafeAreaView style={{ margin: 16, backgroundColor: "#fdfdfd" }}>
       <FlatList
-        style={{ width: "100%" }}
+        style={{ width: "100%", height: "100%", paddingTop: 32 }}
         contentContainerStyle={{ alignItems: "center" }}
         data={data}
         renderItem={renderItem.bind(this)}

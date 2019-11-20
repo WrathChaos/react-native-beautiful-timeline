@@ -90,46 +90,69 @@ const Item = props => {
       </View>
       <View
         style={{
-          marginLeft: 16,
+          flexDirection: "column",
           width: "70%",
-          minHeight: 75,
-          flexDirection: "row"
+          height: null,
+          marginLeft: 12,
+          alignSelf: "baseline"
         }}
       >
-        <View style={{ marginTop: 6, marginLeft: 16 }}>
-          <Text
-            style={{
-              fontSize: 14,
-              color: "#556084",
-              fontWeight: "700",
-              fontFamily: "Alata-Regular"
-            }}
-          >
-            Dribble Warsaw Meetup
-          </Text>
-          <Text
-            style={{
-              color: "#8c93ab",
-              fontSize: 12,
-              fontWeight: "600",
-              marginTop: 8,
-              fontFamily: "Alata-Regular"
-            }}
-          >
-            6 PM - 0 PM. Plac Europeski 1
-          </Text>
-          <Text
-            style={{
-              color: "#8c93ab",
-              fontSize: 12,
-              fontWeight: "300",
-              marginTop: 8,
-              fontFamily: "Alata-Regular"
-            }}
-          >
-            Tue 16, 15:08
-          </Text>
+        <View
+          style={{
+            paddingBottom: 12,
+            paddingTop: 12,
+            marginLeft: 16,
+            marginTop: -5,
+            borderRadius: 12,
+            flexDirection: "row",
+            backgroundColor: "#fff",
+            shadowRadius: 7,
+            shadowOpacity: 0.05,
+            shadowColor: "##f6f7f8",
+            shadowOffset: {
+              width: 0,
+              height: 5
+            }
+          }}
+        >
+          <View style={{ marginLeft: 16, width: "85%" }}>
+            <Text
+              style={{
+                fontSize: 14,
+                color: "#556084",
+                fontWeight: "bold",
+                fontFamily: "Alata-Regular"
+              }}
+            >
+              Dribble Warsaw Meetup
+            </Text>
+            <Text
+              numberOfLines={2}
+              style={{
+                color: "#8c93ab",
+                fontSize: 12,
+                fontWeight: "600",
+                marginTop: 8,
+                fontFamily: "Alata-Regular"
+              }}
+            >
+              Etiam volutpat ligula metus, quis.
+            </Text>
+          </View>
         </View>
+
+        <Text
+          style={{
+            color: "#ccc",
+            fontSize: 10,
+            fontWeight: "100",
+            marginTop: 8,
+            marginLeft: 32,
+            fontFamily: "Alata-Regular"
+          }}
+        >
+          Tue 16, 19:09
+        </Text>
       </View>
     </View>
   );
