@@ -26,7 +26,7 @@ export const _cardContainer = (isCard, shadowColor, backgroundColor) => {
     {
       marginTop: -5,
       paddingTop: 12,
-      marginLeft: 16,
+      marginLeft: 24,
       borderRadius: 12,
       flexDirection: "row",
       paddingBottom: isCard ? 12 : 6
@@ -46,16 +46,16 @@ export const _cardContainer = (isCard, shadowColor, backgroundColor) => {
 
 export default {
   container: {
-    width: "80%",
+    width: "85%",
     height: null,
-    marginLeft: 16,
     paddingTop: 12,
+    paddingLeft: 16,
     paddingBottom: 3,
     alignSelf: "baseline",
     flexDirection: "column"
   },
   cardContainerGlue: {
     width: "100%",
-    marginLeft: 16
+    paddingLeft: 16
   }
 };

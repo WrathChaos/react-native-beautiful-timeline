@@ -1,20 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Dash from "react-native-dash";
+import styles from "./PointLine.style";
 import { Text, View } from "react-native";
 
 const PointLine = props => {
   const { isLastMember, length } = props;
   return (
-    <View style={{ flexDirection: "row" }}>
-      <View
-        style={{
-          marginTop: -7,
-          marginRight: 12,
-          alignItems: "center",
-          flexDirection: "column"
-        }}
-      >
+    <View style={styles.container}>
+      <View style={styles.containerGlue}>
         <Text
           style={{
             color: "#984cf8",

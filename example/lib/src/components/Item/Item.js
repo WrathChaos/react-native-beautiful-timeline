@@ -28,7 +28,6 @@ const Item = props => {
       <PointLine isLastMember={isLastMember} length={dummyListData.length} />
       <View
         style={{
-          marginLeft: 16,
           marginTop: -24,
           flexDirection: "column"
         }}
