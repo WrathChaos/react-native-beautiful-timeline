@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Dash from "react-native-dash";
+import moment from "moment";
 import styles, {
   _dashStyle,
   _dayTextStyle,
@@ -11,6 +12,7 @@ import Point from "./components/Point";
 
 const PointLine = props => {
   const {
+    data,
     day,
     month,
     isLastMember,
@@ -28,14 +30,16 @@ const PointLine = props => {
         <Text
           style={dayTextStyle || _dayTextStyle(dayFontColor, dayFontFamily)}
         >
-          {day}
+          {moment(data).format("DD")}
         </Text>
         <Text
           style={
             monthTextStyle || _monthTextStyle(monthFontColor, monthFontFamily)
           }
         >
-          {month}
+          {moment(data)
+            .format("ddd")
+            .toUpperCase()}
         </Text>
       </View>
       <View style={styles.dividerStyle}>

@@ -8,7 +8,7 @@ import PointLine from "../PointLine/PointLine";
 const dummyListData = [1, 2];
 
 const Item = props => {
-  const { data, isLastMember } = props;
+  const { data, list, isLastMember } = props;
 
   renderItem = listData => {
     const { item, index } = listData;
@@ -17,10 +17,14 @@ const Item = props => {
 
   return (
     <View style={styles.container}>
-      <PointLine isLastMember={isLastMember} length={data.length} />
+      <PointLine
+        data={data.date}
+        length={list.length}
+        isLastMember={isLastMember}
+      />
       <View style={styles.insideListContainer}>
         <FlatList
-          data={data}
+          data={list}
           renderItem={renderItem.bind(this)}
           keyExtractor={(item, index) => index.toString()}
         />
@@ -30,11 +34,13 @@ const Item = props => {
 };
 
 Item.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.object,
+  list: PropTypes.array
 };
 
 Item.defaultProps = {
-  data: dummyListData
+  data: {},
+  list: dummyListData
 };
 
 export default Item;

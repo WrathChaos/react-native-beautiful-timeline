@@ -2,6 +2,7 @@ import { ScreenWidth } from "@freakycoder/react-native-helpers";
 
 export const _container = backgroundColor => ({
   margin: 16,
+  height: "100%",
   backgroundColor
 });
 

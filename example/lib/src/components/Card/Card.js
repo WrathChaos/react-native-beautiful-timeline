@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
+import moment from "moment";
 import styles, {
   _cardContainer,
   _cardShadowContainer,
@@ -11,6 +12,7 @@ import styles, {
 
 const Card = props => {
   const {
+    data,
     date,
     title,
     isCard,
@@ -35,7 +37,7 @@ const Card = props => {
             numberOfLines={1}
             style={titleStyle || _titleStyle(titleFontColor, titleFontFamily)}
           >
-            {title}
+            {data.title}
           </Text>
           <Text
             numberOfLines={2}
@@ -44,7 +46,7 @@ const Card = props => {
               _subtitleStyle(subtitleFontColor, subtitleFontFamily)
             }
           >
-            {subtitle}
+            {data.subtitle}
           </Text>
         </View>
       </View>
@@ -52,7 +54,7 @@ const Card = props => {
         numberOfLines={1}
         style={dateStyle || _dateStyle(dateFontColor, dateFontFamily, isCard)}
       >
-        {date}
+        {moment(data.date).format("DD ddd, HH:mm")}
       </Text>
     </View>
   );
