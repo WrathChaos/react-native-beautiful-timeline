@@ -21,7 +21,7 @@ const dummyData = [
       },
       {
         title: "React Native",
-        subtitle: "Sed at justo eros. Phasellus.",
+        subtitle: "Sed viverra. Nam sagittis.",
         date: 1574342501000
       }
     ]
@@ -31,7 +31,7 @@ const dummyData = [
     data: [
       {
         title: "Timeline",
-        subtitle: "Sed at justo eros. Phasellus. 2",
+        subtitle: "Morbi magna orci, consequat in.",
         date: 1574248261000
       }
     ]
@@ -41,7 +41,7 @@ const dummyData = [
     data: [
       {
         title: "Beauty Timeline",
-        subtitle: "Sed at justo eros. Phasellus. 3",
+        subtitle: "Nulla a eleifend urna. Morbi. Praesent.",
         date: 1574125621000
       }
     ]

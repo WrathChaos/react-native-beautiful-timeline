@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="React Native Beautiful Timeline"
-        src="assets/Screenshots/JSLibraryBoilerplate.png" />
+        src="assets/Screenshots/example.png" />
 </p>
 
 # Installation
@@ -51,21 +51,21 @@ import Timeline from "react-native-beautiful-timeline";
 
 # Configuration - Props
 
-| Property |  Type   | Default | Description                                             |
+WORK IN PROGRESS
+
+<!-- | Property |  Type   | Default | Description                                             |
 | -------- | :-----: | :-----: | ------------------------------------------------------- |
 | outline  | boolean |  true   | make the button outline                                 |
 | solid    | boolean |  false  | make the button with a solid background and a shadow    |
 | gradient | boolean |  false  | make the button with a gradient background and a shadow |
-| width    | number  |   150   | change the button's width                               |
+| width    | number  |   150   | change the button's width                               | -->
 
 ## Future Plans
 
 - [x] ~~LICENSE~~
+- [ ] README: GIF Asset
+- [ ] README: Configuration
 - [ ] Write an article about the lib on Medium
-
-# Change Log
-
-Change log will be here !
 
 ## Author
 
