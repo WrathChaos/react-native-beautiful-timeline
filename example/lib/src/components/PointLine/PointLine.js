@@ -1,86 +1,72 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Dash from "react-native-dash";
-import styles from "./PointLine.style";
+import styles, {
+  _dashStyle,
+  _dayTextStyle,
+  _monthTextStyle
+} from "./PointLine.style";
 import { Text, View } from "react-native";
+import Point from "./components/Point";
 
 const PointLine = props => {
-  const { isLastMember, length } = props;
+  const {
+    day,
+    month,
+    isLastMember,
+    dayTextStyle,
+    length,
+    monthTextStyle,
+    monthFontColor,
+    monthFontFamily,
+    dayFontColor,
+    dayFontFamily
+  } = props;
   return (
     <View style={styles.container}>
       <View style={styles.containerGlue}>
         <Text
-          style={{
-            color: "#984cf8",
-            fontWeight: "700",
-            fontFamily: "Alata-Regular"
-          }}
+          style={dayTextStyle || _dayTextStyle(dayFontColor, dayFontFamily)}
         >
-          16
+          {day}
         </Text>
-        <Text style={{ color: "#ded9e6", fontFamily: "Alata-Regular" }}>
-          TUE
+        <Text
+          style={
+            monthTextStyle || _monthTextStyle(monthFontColor, monthFontFamily)
+          }
+        >
+          {month}
         </Text>
       </View>
-      <View
-        style={{
-          paddingTop: 12,
-          marginLeft: 12
-        }}
-      >
+      <View style={styles.dividerStyle}>
         {!isLastMember && (
           <Dash
             dashGap={7}
             dashColor="#e3e3e3"
-            style={{
-              width: 1,
-              height: 110 * length,
-              flexDirection: "column"
-            }}
+            style={_dashStyle(length)}
+            {...props}
           />
         )}
-        <View
-          style={{
-            position: "absolute",
-            top: 0,
-            left: -4,
-            backgroundColor: "#984cf8",
-            borderRadius: 30,
-            height: 10,
-            width: 10,
-            shadowRadius: 8,
-            shadowOpacity: 0.3,
-            shadowColor: "#984cf8",
-            shadowOffset: {
-              width: 0,
-              height: 3
-            },
-            alignItems: "center",
-            justifyContent: "center"
-          }}
-        >
-          <View
-            style={{
-              width: 20,
-              height: 20,
-              borderWidth: 1,
-              borderRadius: 16,
-              borderColor: "rgba(152, 76, 248, 0.1)",
-              backgroundColor: "rgba(152, 76, 248, 0.05)"
-            }}
-          />
-        </View>
+        <Point {...props} />
       </View>
     </View>
   );
 };
 
 PointLine.propTypes = {
-  example: PropTypes.number
+  day: PropTypes.string,
+  month: PropTypes.string,
+  dayFontColor: PropTypes.string,
+  dayFontFamily: PropTypes.string,
+  monthFontColor: PropTypes.string,
+  monthFontFamily: PropTypes.string
 };
 
 PointLine.defaultProps = {
-  example: 5
+  day: "16",
+  month: "TUE",
+  dayFontColor: "#984cf8",
+  monthFontColor: "#ded9e6"
 };
 
 export default PointLine;
