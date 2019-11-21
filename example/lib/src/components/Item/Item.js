@@ -19,7 +19,11 @@ const Item = props => {
     <View style={styles.container}>
       <PointLine isLastMember={isLastMember} length={data.length} />
       <View style={styles.insideListContainer}>
-        <FlatList data={data} renderItem={renderItem.bind(this)} />
+        <FlatList
+          data={data}
+          renderItem={renderItem.bind(this)}
+          keyExtractor={(item, index) => index.toString()}
+        />
       </View>
     </View>
   );

@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { SafeAreaView, FlatList } from "react-native";
+import styles, { _container } from "./Timeline.style";
 import Item from "./components/Item/Item";
-import { ScreenWidth } from "@freakycoder/react-native-helpers";
 
 const Timeline = props => {
-  const { example } = props;
-  const { data } = props;
+  const { data, backgroundColor } = props;
   renderItem = list => {
     const { item, index } = list;
     const isLastMember = index === data.length - 1;
@@ -14,23 +13,26 @@ const Timeline = props => {
   };
 
   return (
-    <SafeAreaView style={{ margin: 16, backgroundColor: "#fdfdfd" }}>
+    <SafeAreaView style={_container(backgroundColor)}>
       <FlatList
         data={data}
-        style={{ width: ScreenWidth, paddingTop: 32 }}
-        contentContainerStyle={{ alignItems: "center" }}
+        style={styles.listStyle}
         renderItem={renderItem.bind(this)}
+        keyExtractor={(item, index) => index.toString()}
+        contentContainerStyle={styles.contentContainerStyle}
       />
     </SafeAreaView>
   );
 };
 
 Timeline.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array,
+  backgroundColor: PropTypes.string
 };
 
 Timeline.defaultProps = {
-  data: [1, 2, 3, 4, 5]
+  data: [1, 2, 3, 4, 5],
+  backgroundColor: "#fdfdfd"
 };
 
 export default Timeline;
