@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text, View, FlatList } from "react-native";
-import { ScreenWidth } from "@freakycoder/react-native-helpers";
+import { View, FlatList } from "react-native";
 import Card from "../Card/Card";
+import styles from "./Item.style";
 import PointLine from "../PointLine/PointLine";
 
 const dummyListData = [1, 2];
@@ -16,34 +16,21 @@ const Item = props => {
   };
 
   return (
-    <View
-      style={{
-        width: ScreenWidth,
-        alignSelf: "center",
-        flexDirection: "row",
-        justifyContent: "center",
-        borderBottomColor: "#DDE2E2"
-      }}
-    >
-      <PointLine isLastMember={isLastMember} length={dummyListData.length} />
-      <View
-        style={{
-          marginTop: -24,
-          flexDirection: "column"
-        }}
-      >
-        <FlatList data={dummyListData} renderItem={renderItem.bind(this)} />
+    <View style={styles.container}>
+      <PointLine isLastMember={isLastMember} length={data.length} />
+      <View style={styles.insideListContainer}>
+        <FlatList data={data} renderItem={renderItem.bind(this)} />
       </View>
     </View>
   );
 };
 
 Item.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.array
 };
 
 Item.defaultProps = {
-  data: {}
+  data: dummyListData
 };
 
 export default Item;
