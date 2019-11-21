@@ -63,6 +63,7 @@ WORK IN PROGRESS
 ## Future Plans
 
 - [x] ~~LICENSE~~
+- [ ] README: Better Example Image
 - [ ] README: GIF Asset
 - [ ] README: Configuration
 - [ ] Write an article about the lib on Medium
