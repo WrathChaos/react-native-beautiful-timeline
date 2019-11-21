@@ -12,7 +12,7 @@ const Item = props => {
 
   renderItem = listData => {
     const { item, index } = listData;
-    return <Card isCard data={item} />;
+    return <Card key={index} isCard data={item} />;
   };
 
   return (
@@ -26,7 +26,13 @@ const Item = props => {
       }}
     >
       <PointLine isLastMember={isLastMember} length={dummyListData.length} />
-      <View style={{ flexDirection: "column", marginLeft: 16, marginTop: -24 }}>
+      <View
+        style={{
+          marginLeft: 16,
+          marginTop: -24,
+          flexDirection: "column"
+        }}
+      >
         <FlatList data={dummyListData} renderItem={renderItem.bind(this)} />
       </View>
     </View>

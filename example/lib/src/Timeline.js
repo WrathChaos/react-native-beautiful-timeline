@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { SafeAreaView, FlatList } from "react-native";
 import Item from "./components/Item/Item";
+import { ScreenWidth } from "@freakycoder/react-native-helpers";
 
 const Timeline = props => {
   const { example } = props;
@@ -15,9 +16,9 @@ const Timeline = props => {
   return (
     <SafeAreaView style={{ margin: 16, backgroundColor: "#fdfdfd" }}>
       <FlatList
-        style={{ width: "100%", height: "100%", paddingTop: 32 }}
-        contentContainerStyle={{ alignItems: "center" }}
         data={data}
+        style={{ width: ScreenWidth, paddingTop: 32 }}
+        contentContainerStyle={{ alignItems: "center" }}
         renderItem={renderItem.bind(this)}
       />
     </SafeAreaView>
