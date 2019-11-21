@@ -9,7 +9,7 @@ const Card = props => {
       style={{
         width: "80%",
         height: null,
-        marginLeft: 12,
+        marginLeft: 16,
         paddingTop: 12,
         paddingBottom: 3,
         alignSelf: "baseline",
@@ -40,6 +40,7 @@ const Card = props => {
       >
         <View style={{ marginLeft: 16, width: "85%" }}>
           <Text
+            numberOfLines={1}
             style={{
               fontSize: 14,
               color: "#556084",
@@ -64,6 +65,7 @@ const Card = props => {
         </View>
       </View>
       <Text
+        numberOfLines={1}
         style={{
           color: "#ccc",
           fontSize: 10,

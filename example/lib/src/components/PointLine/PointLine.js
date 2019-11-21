@@ -9,10 +9,10 @@ const PointLine = props => {
     <View style={{ flexDirection: "row" }}>
       <View
         style={{
-          flexDirection: "column",
-          marginTop: 8,
+          marginTop: -7,
           marginRight: 12,
-          alignItems: "center"
+          alignItems: "center",
+          flexDirection: "column"
         }}
       >
         <Text
@@ -30,7 +30,7 @@ const PointLine = props => {
       </View>
       <View
         style={{
-          marginTop: 12,
+          paddingTop: 12,
           marginLeft: 12
         }}
       >
@@ -40,7 +40,7 @@ const PointLine = props => {
             dashColor="#e3e3e3"
             style={{
               width: 1,
-              height: 100 * length,
+              height: 110 * length,
               flexDirection: "column"
             }}
           />
