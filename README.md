@@ -128,6 +128,7 @@ Please take a look at above data formatting. Library itself solves everything fo
 - [x] ~~README: Better Example Image~~
 - [x] ~~README: GIF Asset~~
 - [x] ~~README: Data Formatting~~
+- [ ] Without Card Feature Data Formatting Implementation (Coming soon!)
 - [ ] Write an article about the lib on Medium
 
 
