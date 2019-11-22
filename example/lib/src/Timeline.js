@@ -9,7 +9,14 @@ const Timeline = props => {
   renderItem = list => {
     const { item, index } = list;
     const isLastMember = index === data.length - 1;
-    return <Item data={item} list={item.data} isLastMember={isLastMember} />;
+    return (
+      <Item
+        {...props}
+        data={item}
+        list={item.data}
+        isLastMember={isLastMember}
+      />
+    );
   };
 
   return (

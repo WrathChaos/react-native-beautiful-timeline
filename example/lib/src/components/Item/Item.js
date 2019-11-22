@@ -12,12 +12,13 @@ const Item = props => {
 
   renderItem = listData => {
     const { item, index } = listData;
-    return <Card key={index} isCard data={item} />;
+    return <Card {...props} key={index} isCard data={item} />;
   };
 
   return (
     <View style={styles.container}>
       <PointLine
+        {...props}
         data={data.date}
         length={list.length}
         isLastMember={isLastMember}

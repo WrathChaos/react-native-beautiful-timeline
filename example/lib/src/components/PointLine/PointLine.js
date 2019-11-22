@@ -30,7 +30,7 @@ const PointLine = props => {
         <Text
           style={dayTextStyle || _dayTextStyle(dayFontColor, dayFontFamily)}
         >
-          {moment(data).format("DD")}
+          {moment(data).format("DD") || "19"}
         </Text>
         <Text
           style={
@@ -39,7 +39,7 @@ const PointLine = props => {
         >
           {moment(data)
             .format("ddd")
-            .toUpperCase()}
+            .toUpperCase() || "TUE"}
         </Text>
       </View>
       <View style={styles.dividerStyle}>
@@ -58,8 +58,6 @@ const PointLine = props => {
 };
 
 PointLine.propTypes = {
-  day: PropTypes.string,
-  month: PropTypes.string,
   dayFontColor: PropTypes.string,
   dayFontFamily: PropTypes.string,
   monthFontColor: PropTypes.string,
@@ -67,8 +65,6 @@ PointLine.propTypes = {
 };
 
 PointLine.defaultProps = {
-  day: "16",
-  month: "TUE",
   dayFontColor: "#984cf8",
   monthFontColor: "#ded9e6"
 };

@@ -12,6 +12,8 @@
 
 <p align="center">
   <img alt="React Native Beautiful Timeline"
+        src="assets/Screenshots/example.gif" />
+  <img alt="React Native Beautiful Timeline"
         src="assets/Screenshots/example.png" />
 </p>
 
@@ -43,29 +45,89 @@ npm i react-native-beautiful-timeline
 import Timeline from "react-native-beautiful-timeline";
 ```
 
-## Component1 Usage
+## Basic Usage
 
-```jsx
-<Timeline />
+### Data Format
+
+The data format MUST like this example.
+
+```json
+[
+  {
+    "date": 1574342522000,
+    "data": [
+      {
+        "title": "React Native Beautiful Timeline",
+        "subtitle": "Sed at justo eros. Phasellus.",
+        "date": 1574342522000
+      },
+      {
+        "title": "React Native",
+        "subtitle": "Sed viverra. Nam sagittis.",
+        "date": 1574342501000
+      }
+    ]
+  },
+  {
+    "date": 1574248261000,
+    "data": [
+      {
+        "title": "Timeline",
+        "subtitle": "Morbi magna orci, consequat in.",
+        "date": 1574248261000
+      }
+    ]
+  },
+  {
+    "date": 1574125621000,
+    "data": [
+      {
+        "title": "Beauty Timeline",
+        "subtitle": "Nulla a eleifend urna. Morbi. Praesent.",
+        "date": 1574125621000
+      }
+    ]
+  }
+]
 ```
 
-# Configuration - Props
+#### Let's take a look a bit closer:
 
-WORK IN PROGRESS
+For each day & there would be limitless objects(Cards) for each day something like this example:
+Each card comes from `data` array and each **day** comes from each `object` from main array.
 
-<!-- | Property |  Type   | Default | Description                                             |
-| -------- | :-----: | :-----: | ------------------------------------------------------- |
-| outline  | boolean |  true   | make the button outline                                 |
-| solid    | boolean |  false  | make the button with a solid background and a shadow    |
-| gradient | boolean |  false  | make the button with a gradient background and a shadow |
-| width    | number  |   150   | change the button's width                               | -->
+```json
+{
+  "date": 1574342522000,
+  "data": [
+    {
+      "title": "React Native Beautiful Timeline",
+      "subtitle": "Sed at justo eros. Phasellus.",
+      "date": 1574342522000
+    },
+    {
+      "title": "React Native",
+      "subtitle": "Sed viverra. Nam sagittis.",
+      "date": 1574342501000
+    }
+  ]
+}
+```
+
+## Basic Usage
+
+Please take a look at above data formatting. Library itself solves everything for you if the data format is correct.
+
+```jsx
+<Timeline data={data} />
+```
 
 ## Future Plans
 
 - [x] ~~LICENSE~~
-- [ ] README: Better Example Image
-- [ ] README: GIF Asset
-- [ ] README: Configuration
+- [x] ~~README: Better Example Image~~
+- [x] ~~README: GIF Asset~~
+- [x] ~~README: Data Formatting~~
 - [ ] Write an article about the lib on Medium
 
 ## Author
