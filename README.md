@@ -130,6 +130,11 @@ Please take a look at above data formatting. Library itself solves everything fo
 - [x] ~~README: Data Formatting~~
 - [ ] Write an article about the lib on Medium
 
+
+## Credits
+
+Thank you for this awesome inspiration. Designed by [Kamil Janus](https://dribbble.com/shots/3934981-Calendar-view-of-concept-financial-app)
+
 ## Author
 
 FreakyCoder, kurayogun@gmail.com
