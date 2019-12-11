@@ -1,6 +1,6 @@
 {
   "name": "react-native-beautiful-timeline",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Fully customizable, beautifully designed Timeline for React Native.",
   "keywords": [
     "timeline",
@@ -28,6 +28,7 @@
     "react-native": ">= 0.55.x",
     "moment": ">= 2.24.0",
     "react-native-dash": ">= 0.0.11",
+    "react-native-androw": ">= 0.0.34",
     "@freakycoder/react-native-helpers": ">= 0.1.0"
   }
 }

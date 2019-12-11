@@ -34,6 +34,7 @@ npm i react-native-beautiful-timeline
 "react-native": ">= 0.55.x",
 "moment": ">= 2.24.0",
 "react-native-dash": ">= 0.0.11",
+"react-native-androw" : ">= 0.0.34",
 "@freakycoder/react-native-helpers": ">= 0.1.0",
 ```
 
@@ -122,15 +123,19 @@ Please take a look at above data formatting. Library itself solves everything fo
 <Timeline data={data} />
 ```
 
+## Configuration - Props
+
+### Coming Soon !
+
 ## Future Plans
 
 - [x] ~~LICENSE~~
 - [x] ~~README: Better Example Image~~
 - [x] ~~README: GIF Asset~~
 - [x] ~~README: Data Formatting~~
+- [ ] Configuration: Props
 - [ ] Without Card Feature Data Formatting Implementation (Coming soon!)
 - [ ] Write an article about the lib on Medium
-
 
 ## Credits
 
