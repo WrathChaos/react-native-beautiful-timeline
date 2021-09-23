@@ -17,6 +17,7 @@
     "react": "17.0.2",
     "react-native": "0.65.1",
     "react-native-androw": "0.0.34",
+    "react-native-beautiful-timeline": "^0.1.0",
     "react-native-dash": "0.0.11",
     "react-native-dynamic-vector-icons": "^0.2.1",
     "react-native-vector-icons": "^6.6.0"

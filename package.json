@@ -1,6 +1,6 @@
 {
   "name": "react-native-beautiful-timeline",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fully customizable, beautifully designed Timeline for React Native.",
   "keywords": [
     "timeline",
@@ -19,7 +19,7 @@
   ],
   "homepage": "https://www.freakycoder.com",
   "bugs": "https://github.com/WrathChaos/react-native-beautiful-timeline/issues",
-  "main": "./lib/src/Timeline.js",
+  "main": "./build/dist/Timeline.js",
   "repository": "git@github.com:WrathChaos/react-native-beautiful-timeline.git",
   "author": "Kuray (FreakyCoder) <kurayogun@gmail.com>",
   "license": "MIT",
