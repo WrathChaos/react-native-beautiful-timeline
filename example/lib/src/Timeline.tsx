@@ -26,10 +26,10 @@ const Timeline = (props: any) => {
       <FlatList
         data={data}
         style={styles.listStyle}
-        contentInset={styles.contentInset}
+        renderItem={({ item, index }) => renderItem(item, index)}
         keyExtractor={(item, index) => index.toString()}
         contentContainerStyle={styles.contentContainerStyle}
-        renderItem={({ item, index }) => renderItem(item, index)}
+        contentInset={styles.contentInset}
       />
     </SafeAreaView>
   );
