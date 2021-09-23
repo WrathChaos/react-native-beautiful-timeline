@@ -2,18 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 import moment from "moment";
-import Androw from "react-native-androw"
+import Androw from "react-native-androw";
 import styles, {
   _cardContainer,
   _cardShadowContainer,
   _titleStyle,
   _subtitleStyle,
   _dateStyle,
-  _shadowStyle
+  _shadowStyle,
 } from "./Card.style";
 import { isAndroid } from "@freakycoder/react-native-helpers";
 
-const Card = props => {
+const Card = (props) => {
   const {
     data,
     date,
@@ -26,28 +26,24 @@ const Card = props => {
     subtitleStyle,
     dateFontColor,
     titleFontColor,
-    dateFontFamily,
-    titleFontFamily,
     subtitleFontColor,
-    subtitleFontFamily,
-    cardBackgroundColor
+    cardBackgroundColor,
   } = props;
   return (
-    <Androw style={[styles.container, isAndroid && _shadowStyle(isCard, shadowColor, cardBackgroundColor)]}>
+    <Androw
+      style={[styles.container, isAndroid && _shadowStyle(isCard, shadowColor)]}
+    >
       <Androw style={_cardContainer(isCard, shadowColor, cardBackgroundColor)}>
         <View style={styles.cardContainerGlue}>
           <Text
             numberOfLines={1}
-            style={titleStyle || _titleStyle(titleFontColor, titleFontFamily)}
+            style={titleStyle || _titleStyle(titleFontColor)}
           >
             {data.title}
           </Text>
           <Text
             numberOfLines={2}
-            style={
-              subtitleStyle ||
-              _subtitleStyle(subtitleFontColor, subtitleFontFamily)
-            }
+            style={subtitleStyle || _subtitleStyle(subtitleFontColor)}
           >
             {data.subtitle}
           </Text>
@@ -55,7 +51,7 @@ const Card = props => {
       </Androw>
       <Text
         numberOfLines={1}
-        style={dateStyle || _dateStyle(dateFontColor, dateFontFamily, isCard)}
+        style={dateStyle || _dateStyle(dateFontColor, isCard)}
       >
         {moment(data.date).format("DD ddd, HH:mm")}
       </Text>
@@ -70,11 +66,10 @@ Card.propTypes = {
   subtitle: PropTypes.string,
   shadowColor: PropTypes.string,
   dateFontColor: PropTypes.string,
-  dateFontFamily: PropTypes.string,
   titleFontColor: PropTypes.string,
   subtitleFontColor: PropTypes.string,
   subtitleFontFamily: PropTypes.string,
-  cardBackgroundColor: PropTypes.string
+  cardBackgroundColor: PropTypes.string,
 };
 
 Card.defaultProps = {
@@ -86,7 +81,7 @@ Card.defaultProps = {
   cardBackgroundColor: "#fff",
   subtitleFontColor: "#8c93ab",
   title: "React Native Beautiful Timeline",
-  subtitle: "Etiam volutpat ligula metus, quis."
+  subtitle: "Etiam volutpat ligula metus, quis.",
 };
 
 export default Card;

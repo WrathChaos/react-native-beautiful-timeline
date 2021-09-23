@@ -1,6 +1,12 @@
+import { ViewStyle, StyleSheet } from "react-native";
 import { ScreenWidth, isAndroid } from "@freakycoder/react-native-helpers";
 
-export default {
+interface Style {
+  container: ViewStyle;
+  insideListContainer: ViewStyle;
+}
+
+export default StyleSheet.create<Style>({
   container: {
     width: ScreenWidth,
     alignSelf: "center",
@@ -10,6 +16,6 @@ export default {
   },
   insideListContainer: {
     marginTop: -24,
-    flexDirection: "column"
-  }
-};
+    flexDirection: "column",
+  },
+});

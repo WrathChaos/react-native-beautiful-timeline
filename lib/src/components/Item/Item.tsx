@@ -1,16 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { View, FlatList } from "react-native";
+/**
+ * ? Local Imports
+ */
 import Card from "../Card/Card";
 import styles from "./Item.style";
 import PointLine from "../PointLine/PointLine";
 
 const dummyListData = [1, 2];
 
-const Item = props => {
+const Item = (props) => {
   const { data, list, isLastMember } = props;
 
-  renderItem = listData => {
+  const renderItem = (listData) => {
     const { item, index } = listData;
     return <Card {...props} key={index} isCard data={item} />;
   };
@@ -36,12 +39,12 @@ const Item = props => {
 
 Item.propTypes = {
   data: PropTypes.object,
-  list: PropTypes.array
+  list: PropTypes.array,
 };
 
 Item.defaultProps = {
   data: {},
-  list: dummyListData
+  list: dummyListData,
 };
 
 export default Item;

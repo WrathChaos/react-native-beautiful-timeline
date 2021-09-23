@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { SafeAreaView, FlatList } from "react-native";
-import styles, { _container } from "./Timeline.style";
+import styles, { _container } from "./Timeline.style.ts";
 import Item from "./components/Item/Item";
 
 const Timeline = props => {
