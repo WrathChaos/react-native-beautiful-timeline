@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import PropTypes from "prop-types";
 import { SafeAreaView, FlatList } from "react-native";
 /**
@@ -26,10 +26,10 @@ const Timeline = (props: any) => {
       <FlatList
         data={data}
         style={styles.listStyle}
-        renderItem={({ item, index }) => renderItem(item, index)}
+        contentInset={styles.contentInset}
         keyExtractor={(item, index) => index.toString()}
         contentContainerStyle={styles.contentContainerStyle}
-        contentInset={styles.contentInset}
+        renderItem={({ item, index }) => renderItem(item, index)}
       />
     </SafeAreaView>
   );

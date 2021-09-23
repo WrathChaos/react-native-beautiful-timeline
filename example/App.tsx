@@ -4,7 +4,7 @@ import { ModernHeader } from "@freakycoder/react-native-header-view";
 /**
  * ? Local Imports
  */
-import Timeline from "./lib/src/Timeline";
+import Timeline from "./build/dist/Timeline";
 
 const dummyData = [
   {
