@@ -13,7 +13,7 @@
     "@freakycoder/react-native-header-view": "^0.4.13",
     "@freakycoder/react-native-helpers": "^0.1.0",
     "@react-native-community/toolbar-android": "^0.2.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "react": "17.0.2",
     "react-native": "0.65.1",
     "react-native-androw": "0.0.34",
