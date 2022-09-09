@@ -1,43 +1,39 @@
 import * as React from "react";
-import PropTypes from "prop-types";
-import Dash from "react-native-dash";
+import { StyleProp, Text, TextStyle, View, ViewStyle } from "react-native";
 import moment from "moment";
-import styles, {
-  _dashStyle,
-  _dayTextStyle,
-  _monthTextStyle,
-} from "./PointLine.style";
-import { Text, View } from "react-native";
+import Dash from "react-native-dash";
+/**
+ * ? Local Imports
+ */
+import styles, { _dashStyle } from "./PointLine.style";
 import Point from "./components/Point";
 
-const PointLine = (props) => {
-  const {
-    data,
-    day,
-    month,
-    isLastMember,
-    dayTextStyle,
-    length,
-    monthTextStyle,
-    monthFontColor,
-    monthFontFamily,
-    dayFontColor,
-    dayFontFamily,
-  } = props;
+interface PointLineProps {
+  date: number;
+  length: number;
+  isLastMember: boolean;
+  style?: StyleProp<ViewStyle>;
+  dayTextStyle?: StyleProp<TextStyle>;
+  monthTextStyle?: StyleProp<TextStyle>;
+}
+
+const PointLine: React.FC<PointLineProps> = ({
+  style,
+  date,
+  isLastMember,
+  dayTextStyle,
+  length,
+  monthTextStyle,
+  ...rest
+}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerGlue}>
-        <Text
-          style={dayTextStyle || _dayTextStyle(dayFontColor, dayFontFamily)}
-        >
-          {moment(data).format("DD") || "19"}
+        <Text style={[styles.dayTextStyle, dayTextStyle]}>
+          {moment(date).format("DD")}
         </Text>
-        <Text
-          style={
-            monthTextStyle || _monthTextStyle(monthFontColor, monthFontFamily)
-          }
-        >
-          {moment(data).format("ddd").toUpperCase() || "TUE"}
+        <Text style={[styles.monthTextStyle, monthTextStyle]}>
+          {moment(date).format("ddd").toUpperCase()}
         </Text>
       </View>
       <View style={styles.dividerStyle}>
@@ -46,25 +42,15 @@ const PointLine = (props) => {
             dashGap={7}
             dashColor="#e3e3e3"
             style={_dashStyle(length)}
-            {...props}
+            dashLength={length}
+            dashThickness={1}
+            {...rest}
           />
         )}
-        <Point {...props} />
+        <Point {...rest} />
       </View>
     </View>
   );
-};
-
-PointLine.propTypes = {
-  dayFontColor: PropTypes.string,
-  dayFontFamily: PropTypes.string,
-  monthFontColor: PropTypes.string,
-  monthFontFamily: PropTypes.string,
-};
-
-PointLine.defaultProps = {
-  dayFontColor: "#984cf8",
-  monthFontColor: "#ded9e6",
 };
 
 export default PointLine;
