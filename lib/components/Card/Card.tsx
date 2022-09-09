@@ -1,89 +1,75 @@
 import * as React from "react";
-import PropTypes from "prop-types";
-import { Text, View } from "react-native";
+import { View, Text, StyleProp, ViewStyle, TextStyle } from "react-native";
 import moment from "moment";
 import Androw from "react-native-androw";
-import { isAndroid } from "@freakycoder/react-native-helpers";
 /**
  * ? Local Imports
  */
-import styles, {
-  _cardContainer,
-  _titleStyle,
-  _subtitleStyle,
-  _dateStyle,
-  _shadowStyle,
-} from "./Card.style";
+import styles from "./Card.style";
+import { ITimelineData } from "lib/models";
 
-const Card = (props) => {
-  const {
-    data,
-    date,
-    title,
-    isCard,
-    subtitle,
-    dateStyle,
-    titleStyle,
-    shadowColor,
-    subtitleStyle,
-    dateFontColor,
-    titleFontColor,
-    subtitleFontColor,
-    cardBackgroundColor,
-  } = props;
+interface CardProps {
+  data: ITimelineData;
+  isCard?: boolean;
+  dateFormat?: string;
+  style?: StyleProp<ViewStyle>;
+  titleTextStyle?: StyleProp<TextStyle>;
+  subtitleTextStyle?: StyleProp<TextStyle>;
+  dateTextStyle?: StyleProp<TextStyle>;
+}
+
+const Card: React.FC<CardProps> = ({
+  isCard = true,
+  data,
+  titleTextStyle,
+  subtitleTextStyle,
+  dateTextStyle,
+  dateFormat = "DD ddd, HH:mm",
+}) => {
+  const { title, subtitle, date } = data;
   return (
     <Androw
-      style={[styles.container, isAndroid && _shadowStyle(isCard, shadowColor)]}
+      style={[
+        styles.container,
+        styles.shadowStyle,
+        isCard && {
+          backgroundColor: "transparent",
+        },
+      ]}
     >
-      <Androw style={_cardContainer(isCard, shadowColor, cardBackgroundColor)}>
+      <Androw
+        style={[
+          styles.cardContainer,
+          isCard && styles.cardContainerShadowStyle,
+        ]}
+      >
         <View style={styles.cardContainerGlue}>
           <Text
             numberOfLines={1}
-            style={titleStyle || _titleStyle(titleFontColor)}
+            style={[styles.titleTextStyle, titleTextStyle]}
           >
-            {data.title}
+            {title}
           </Text>
           <Text
             numberOfLines={2}
-            style={subtitleStyle || _subtitleStyle(subtitleFontColor)}
+            style={[styles.subtitleTextStyle, subtitleTextStyle]}
           >
-            {data.subtitle}
+            {subtitle}
           </Text>
         </View>
       </Androw>
       <Text
         numberOfLines={1}
-        style={dateStyle || _dateStyle(dateFontColor, isCard)}
+        style={[
+          styles.dateTextStyle,
+          isCard && { marginTop: 8 },
+          dateTextStyle,
+        ]}
       >
-        {moment(data.date).format("DD ddd, HH:mm")}
+        {moment(date).format(dateFormat)}
       </Text>
     </Androw>
   );
-};
-
-Card.propTypes = {
-  date: PropTypes.string,
-  isCard: PropTypes.bool,
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  shadowColor: PropTypes.string,
-  dateFontColor: PropTypes.string,
-  titleFontColor: PropTypes.string,
-  subtitleFontColor: PropTypes.string,
-  subtitleFontFamily: PropTypes.string,
-  cardBackgroundColor: PropTypes.string,
-};
-
-Card.defaultProps = {
-  isCard: true,
-  shadowColor: "#000",
-  date: "Tue 16, 19:09",
-  dateFontColor: "#ccc",
-  titleFontColor: "#556084",
-  cardBackgroundColor: "#fff",
-  subtitleFontColor: "#8c93ab",
-  title: "React Native Beautiful Timeline",
-  subtitle: "Etiam volutpat ligula metus, quis.",
 };
 
 export default Card;

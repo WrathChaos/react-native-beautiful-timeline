@@ -1,19 +1,25 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { SafeAreaView, FlatList } from "react-native";
+import React from "react";
+import { SafeAreaView, FlatList, StyleProp, ViewStyle } from "react-native";
+import Item from "./components/Item/Item";
+import { ITimeline } from "./models";
 /**
  * ? Local Imports
  */
-import styles, { _container } from "./Timeline.style";
-import Item from "./components/Item/Item";
+import styles from "./Timeline.style";
 
-const Timeline = (props: any) => {
-  const { data, backgroundColor } = props;
+type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
+
+interface TimelineProps {
+  style?: CustomStyleProp;
+  data: ITimeline[];
+}
+
+const Timeline: React.FC<TimelineProps> = ({ data, style, ...rest }) => {
   const renderItem = (item: any, index: number) => {
     const isLastMember = index === data.length - 1;
     return (
       <Item
-        {...props}
+        {...rest}
         data={item}
         list={item.data}
         isLastMember={isLastMember}
@@ -22,7 +28,7 @@ const Timeline = (props: any) => {
   };
 
   return (
-    <SafeAreaView style={_container(backgroundColor)}>
+    <SafeAreaView style={[styles.container, style]}>
       <FlatList
         data={data}
         style={styles.listStyle}
@@ -33,16 +39,6 @@ const Timeline = (props: any) => {
       />
     </SafeAreaView>
   );
-};
-
-Timeline.propTypes = {
-  data: PropTypes.array,
-  backgroundColor: PropTypes.string,
-};
-
-Timeline.defaultProps = {
-  data: [1, 2, 3, 4, 5],
-  backgroundColor: "#fdfdfd",
 };
 
 export default Timeline;

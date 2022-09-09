@@ -1,24 +1,28 @@
-import { ViewStyle, StyleSheet, Insets } from "react-native";
 import {
-  ScreenWidth,
-  isAndroid,
-  ScreenHeight,
-} from "@freakycoder/react-native-helpers";
+  ViewStyle,
+  StyleSheet,
+  Insets,
+  Dimensions,
+  Platform,
+} from "react-native";
+
+const { width: ScreenWidth, height: ScreenHeight } = Dimensions.get("screen");
+const isAndroid = Platform.OS === "android";
 
 interface Style {
+  container: ViewStyle;
   listStyle: ViewStyle;
   contentContainerStyle: ViewStyle;
   contentInset: Insets;
 }
 
-export const _container = (backgroundColor: string): ViewStyle => ({
-  marginLeft: 16,
-  marginRight: 16,
-  height: ScreenHeight,
-  backgroundColor: backgroundColor,
-});
-
 export default StyleSheet.create<Style>({
+  container: {
+    marginLeft: 16,
+    marginRight: 16,
+    height: ScreenHeight,
+    backgroundColor: "#fdfdfd",
+  },
   listStyle: {
     paddingTop: 16,
     width: ScreenWidth,

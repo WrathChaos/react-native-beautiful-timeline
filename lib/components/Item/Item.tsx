@@ -1,26 +1,37 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { View, FlatList } from "react-native";
+import React from "react";
+import { View, StyleProp, ViewStyle } from "react-native";
+import Card from "../Card/Card";
+import PointLine from "../PointLine/PointLine";
+import { ITimeline, ITimelineData } from "../../models";
 /**
  * ? Local Imports
  */
-import Card from "../Card/Card";
 import styles from "./Item.style";
-import PointLine from "../PointLine/PointLine";
 
-const dummyListData = [1, 2];
+type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
 
-const Item = (props: any) => {
-  const { data, list, isLastMember } = props;
+interface ItemProps {
+  style?: CustomStyleProp;
+  data: ITimeline;
+  list: ITimelineData[];
+  isLastMember: boolean;
+}
 
-  const renderItem = (item: any, index: number) => {
-    return <Card {...props} key={index} isCard data={item} />;
+const Item: React.FC<ItemProps> = ({
+  style,
+  data,
+  list,
+  isLastMember,
+  ...rest
+}) => {
+  const renderItem = (item: ITimelineData, index: number) => {
+    return <Card {...rest} key={index} isCard data={item} />;
   };
 
   return (
     <View style={styles.container}>
       <PointLine
-        {...props}
+        {...rest}
         data={data.date}
         length={list.length}
         isLastMember={isLastMember}
@@ -34,16 +45,6 @@ const Item = (props: any) => {
       </View>
     </View>
   );
-};
-
-Item.propTypes = {
-  data: PropTypes.object,
-  list: PropTypes.array,
-};
-
-Item.defaultProps = {
-  data: {},
-  list: dummyListData,
 };
 
 export default Item;
