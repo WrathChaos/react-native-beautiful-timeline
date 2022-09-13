@@ -1,22 +1,25 @@
 import { ViewStyle, StyleSheet } from "react-native";
 
-export const _innerContainer = (
-  backgroundColor: string,
-  shadowColor: string,
-): Array<ViewStyle> => [
-  {
+interface Style {
+  innerContainer: ViewStyle;
+  shadowStyle: ViewStyle;
+  outerContainer: ViewStyle;
+}
+
+export default StyleSheet.create<Style>({
+  innerContainer: {
     top: 0,
     left: -4,
     width: 10,
     height: 10,
-    backgroundColor,
+    backgroundColor: "#984cf8",
     borderRadius: 30,
     position: "absolute",
     alignItems: "center",
     justifyContent: "center",
   },
-  {
-    shadowColor,
+  shadowStyle: {
+    shadowColor: "#984cf8",
     shadowRadius: 8,
     shadowOpacity: 0.3,
     shadowOffset: {
@@ -24,24 +27,12 @@ export const _innerContainer = (
       height: 3,
     },
   },
-];
-
-export const _outerContainer = (
-  borderColor: string,
-  backgroundColor: string,
-): ViewStyle => ({
-  width: 20,
-  height: 20,
-  borderColor,
-  borderWidth: 1,
-  backgroundColor,
-  borderRadius: 16,
-});
-
-interface Style {
-  container: ViewStyle;
-}
-
-export default StyleSheet.create<Style>({
-  container: {},
+  outerContainer: {
+    width: 20,
+    height: 20,
+    borderWidth: 1,
+    borderRadius: 16,
+    borderColor: "rgba(152, 76, 248, 0.1)",
+    backgroundColor: "rgba(152, 76, 248, 0.05)",
+  },
 });
