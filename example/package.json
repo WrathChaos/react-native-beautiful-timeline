@@ -15,7 +15,7 @@
     "@react-native-community/toolbar-android": "^0.2.1",
     "moment": "^2.29.2",
     "react": "17.0.2",
-    "react-native": "0.65.1",
+    "react-native": "0.70.1",
     "react-native-androw": "0.0.34",
     "react-native-beautiful-timeline": "^0.1.1",
     "react-native-dash": "0.0.11",
