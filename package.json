@@ -23,9 +23,9 @@
   "repository": "git@github.com:WrathChaos/react-native-beautiful-timeline.git",
   "author": "Kuray (FreakyCoder) <kurayogun@gmail.com>",
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "moment": ">= 2.24.0",
-    "react-native-dash": ">= 0.0.11",
+    "react-native-dash-2": ">= 0.2.3",
     "react-native-androw": ">= 0.0.34",
     "@freakycoder/react-native-helpers": ">= 0.1.0"
   },

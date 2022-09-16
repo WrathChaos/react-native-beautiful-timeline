@@ -2,6 +2,7 @@ import React from "react";
 import { SafeAreaView, FlatList, StyleProp, ViewStyle } from "react-native";
 import Item from "./components/Item/Item";
 import { ITimeline } from "./models";
+import { DashProps } from "react-native-dash-2";
 /**
  * ? Local Imports
  */
@@ -9,12 +10,16 @@ import styles from "./Timeline.style";
 
 type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
 
-interface TimelineProps {
-  style?: CustomStyleProp;
+interface TimelineProps extends DashProps {
+  timelineStyle?: CustomStyleProp;
   data: ITimeline[];
 }
 
-const Timeline: React.FC<TimelineProps> = ({ data, style, ...rest }) => {
+const Timeline: React.FC<TimelineProps> = ({
+  data,
+  timelineStyle,
+  ...rest
+}) => {
   const renderItem = (item: any, index: number) => {
     const isLastMember = index === data.length - 1;
     return (
@@ -28,7 +33,7 @@ const Timeline: React.FC<TimelineProps> = ({ data, style, ...rest }) => {
   };
 
   return (
-    <SafeAreaView style={[styles.container, style]}>
+    <SafeAreaView style={[styles.container, timelineStyle]}>
       <FlatList
         data={data}
         style={styles.listStyle}

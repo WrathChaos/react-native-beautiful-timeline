@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@freakycoder/react-native-header-view": "^0.4.13",
     "@freakycoder/react-native-helpers": "^1.0.2",
     "@react-native-community/toolbar-android": "^0.2.1",
     "moment": "^2.29.4",
@@ -17,10 +18,10 @@
     "react-native": "0.70.0",
     "react-native-androw": "0.0.34",
     "react-native-beautiful-timeline": "^0.1.1",
-    "react-native-dash": "0.0.11",
-    "react-native-dynamic-vector-icons": "^1.2.0",
+    "react-native-dash-2": "^0.2.3",
     "react-native-modern-header": "^1.0.2",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-dynamic-vector-icons": "^0.2.1",
+    "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",

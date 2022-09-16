@@ -782,7 +782,12 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
-"@freakycoder/react-native-helpers@^1.0.2", "@freakycoder/react-native-helpers@>= 0.1.0":
+"@freakycoder/react-native-header-view@^0.4.13":
+  "integrity" "sha512-SGx5GWHwWcsDgHuu29s00E9zB6Chps8FJxS5MiRayd9YPHflmD6VK4QX7oXuR7bUqJyyySpdPcO4DUkTpr/aUg=="
+  "resolved" "https://registry.npmjs.org/@freakycoder/react-native-header-view/-/react-native-header-view-0.4.13.tgz"
+  "version" "0.4.13"
+
+"@freakycoder/react-native-helpers@^1.0.2", "@freakycoder/react-native-helpers@>= 0.0.2", "@freakycoder/react-native-helpers@>= 0.1.0":
   "integrity" "sha512-VBFNOQg7VTCyAP/ty0O2anlOrZtBPThwMXywU0IMbkcUkk38UO1DQ6A93NMstA2vf1ozJ4QqKd/IIv9rgrcR2A=="
   "resolved" "https://registry.npmjs.org/@freakycoder/react-native-helpers/-/react-native-helpers-1.0.2.tgz"
   "version" "1.0.2"
@@ -1307,7 +1312,7 @@
   "resolved" "https://registry.npmjs.org/@react-native-community/eslint-plugin/-/eslint-plugin-1.2.0.tgz"
   "version" "1.2.0"
 
-"@react-native-community/toolbar-android@^0.2.1":
+"@react-native-community/toolbar-android@^0.1.0-rc.1", "@react-native-community/toolbar-android@^0.2.1":
   "integrity" "sha512-kq1jVuJTSnKvqiyFqHp0hNLfntZRdE16heQI2UbE7dUUI0pR7YIoBoRlnt8x5ivJJ/f6m1Dcidku9LkwtcUs6w=="
   "resolved" "https://registry.npmjs.org/@react-native-community/toolbar-android/-/toolbar-android-0.2.1.tgz"
   "version" "0.2.1"
@@ -4366,7 +4371,7 @@
   "resolved" "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
   "version" "4.1.1"
 
-"lodash@^4.17.21":
+"lodash@^4.17.15", "lodash@^4.17.21":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
   "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   "version" "4.17.21"
@@ -5490,7 +5495,12 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
-"react-native-dash@>= 0.0.11", "react-native-dash@0.0.11":
+"react-native-dash-2@^0.2.3":
+  "integrity" "sha512-qDCqswOHBGQtHl3K8NWRu95zFJyy0tr0YdePgMDRGvAz6P5Q2wEyjSAOPbu1tdaPjbEQK+VJuKQg9mlB+lQHgw=="
+  "resolved" "https://registry.npmjs.org/react-native-dash-2/-/react-native-dash-2-0.2.3.tgz"
+  "version" "0.2.3"
+
+"react-native-dash@>= 0.0.11":
   "integrity" "sha512-edgspmVtGVYxOhGs8STCj7+VyQYUR1RkiGHkWDGwiQkEEIFrxWLa3D9ZIrLsm3LKU4XGQ2iEqCv9fJQSeTyAJA=="
   "resolved" "https://registry.npmjs.org/react-native-dash/-/react-native-dash-0.0.11.tgz"
   "version" "0.0.11"
@@ -5498,10 +5508,10 @@
     "prop-types" "^15.5.10"
     "react-native-measureme" "0.0.2"
 
-"react-native-dynamic-vector-icons@^1.2.0", "react-native-dynamic-vector-icons@>= 1.0.0":
-  "integrity" "sha512-5UT+BGA9GPXe5UljAaGO5fbFfxxZKluuD84qkWvl/PHqJciqYZdhxsJ4pE8jVbdlCsgoYTclIar0owWGUnH0Fg=="
-  "resolved" "https://registry.npmjs.org/react-native-dynamic-vector-icons/-/react-native-dynamic-vector-icons-1.2.0.tgz"
-  "version" "1.2.0"
+"react-native-dynamic-vector-icons@^0.2.1", "react-native-dynamic-vector-icons@>= 1.0.0", "react-native-dynamic-vector-icons@>= x.x.x":
+  "integrity" "sha512-9ZKBRteUDy2lOYpFO4JJprWN/gJROpdIdY+CjyIb85K9A+i6Cz2Wy0uVAaLbI26qZbxd4X1+B1FMUlswfUEzzg=="
+  "resolved" "https://registry.npmjs.org/react-native-dynamic-vector-icons/-/react-native-dynamic-vector-icons-0.2.2.tgz"
+  "version" "0.2.2"
 
 "react-native-gradle-plugin@^0.70.2":
   "integrity" "sha512-k7d+CVh0fs/VntA2WaKD58cFB2rtiSLBHYlciH18ncaT4N/B3A4qOGv9pSCEHfQikELm6vAf98KMbE3c8KnH1A=="
@@ -5518,13 +5528,14 @@
   "resolved" "https://registry.npmjs.org/react-native-modern-header/-/react-native-modern-header-1.0.2.tgz"
   "version" "1.0.2"
 
-"react-native-vector-icons@^9.2.0", "react-native-vector-icons@>= 6.x.x", "react-native-vector-icons@>= 7.0.0":
-  "integrity" "sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA=="
-  "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz"
-  "version" "9.2.0"
+"react-native-vector-icons@^6.6.0", "react-native-vector-icons@>= 6.x.x", "react-native-vector-icons@>= 7.0.0":
+  "integrity" "sha512-LKdwqDIGVxV1+4HnmFIPaok9hba3WyTQ7H2Wj5RFv54zIdIjixrAiV9VD/Ej9Mc5/rUhTpmMiIVF3LVmVYD7dg=="
+  "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-6.7.0.tgz"
+  "version" "6.7.0"
   dependencies:
+    "lodash" "^4.17.15"
     "prop-types" "^15.7.2"
-    "yargs" "^16.1.1"
+    "yargs" "^15.0.2"
 
 "react-native@*", "react-native@>= 0.55.x", "react-native@>=0.41.2", "react-native@0.70.0":
   "integrity" "sha512-QjXLbrK9f+/B2eCzn6kAvglLV/8nwPuFGaFv7ggPpAzFRyx5bVN1dwQLHL3MrP7iXR/M7Jc6Nnid7tmRSic6vA=="
@@ -5586,7 +5597,7 @@
     "react-shallow-renderer" "^16.15.0"
     "scheduler" "^0.23.0"
 
-"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.2.0", "react@>= 16.x.x", "react@18.1.0", "react@18.2.0":
+"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.2.0", "react@>= 16.x", "react@>= 16.x.x", "react@18.1.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -6703,17 +6714,12 @@
     "camelcase" "^5.0.0"
     "decamelize" "^1.2.0"
 
-"yargs-parser@^20.2.2":
-  "integrity" "sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w=="
-  "resolved" "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz"
-  "version" "20.2.9"
-
 "yargs-parser@^21.0.0":
   "integrity" "sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw=="
   "resolved" "https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz"
   "version" "21.1.1"
 
-"yargs@^15.1.0", "yargs@^15.3.1":
+"yargs@^15.0.2", "yargs@^15.1.0", "yargs@^15.3.1":
   "integrity" "sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A=="
   "resolved" "https://registry.npmjs.org/yargs/-/yargs-15.4.1.tgz"
   "version" "15.4.1"
@@ -6729,19 +6735,6 @@
     "which-module" "^2.0.0"
     "y18n" "^4.0.0"
     "yargs-parser" "^18.1.2"
-
-"yargs@^16.1.1":
-  "integrity" "sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw=="
-  "resolved" "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz"
-  "version" "16.2.0"
-  dependencies:
-    "cliui" "^7.0.2"
-    "escalade" "^3.1.1"
-    "get-caller-file" "^2.0.5"
-    "require-directory" "^2.1.1"
-    "string-width" "^4.2.0"
-    "y18n" "^5.0.5"
-    "yargs-parser" "^20.2.2"
 
 "yargs@^17.3.1":
   "integrity" "sha512-t6YAJcxDkNX7NFYiVtKvWUz8l+PaKTLiL63mJYWR2GnHq2gjEWISzsLp9wg3aY36dY1j+gfIEL3pIF+XlJJfbA=="

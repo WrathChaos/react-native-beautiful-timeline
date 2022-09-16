@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleProp, ViewStyle } from "react-native";
+import { View, StyleProp, FlatList, ViewStyle } from "react-native";
 import Card from "../Card/Card";
 import PointLine from "../PointLine/PointLine";
 import { ITimeline, ITimelineData } from "../../models";
@@ -8,10 +8,8 @@ import { ITimeline, ITimelineData } from "../../models";
  */
 import styles from "./Item.style";
 
-type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
-
 interface ItemProps {
-  style?: CustomStyleProp;
+  style?: StyleProp<ViewStyle>;
   data: ITimeline;
   list: ITimelineData[];
   isLastMember: boolean;
@@ -29,10 +27,10 @@ const Item: React.FC<ItemProps> = ({
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <PointLine
         {...rest}
-        data={data.date}
+        date={data.date}
         length={list.length}
         isLastMember={isLastMember}
       />

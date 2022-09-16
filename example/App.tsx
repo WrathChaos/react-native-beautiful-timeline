@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StatusBar, SafeAreaView } from "react-native";
-// import ModernHeader from "react-native-modern-header";
 // import Timeline from "react-native-beautiful-timeline";
+import { ModernHeader } from "@freakycoder/react-native-header-view";
 import Timeline from "./lib/Timeline";
 
 const dummyData = [
@@ -67,8 +67,10 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={{ flex: 1, backgroundColor: "#fdfdfd" }}>
-        {/* <ModernHeader
+      <SafeAreaView
+        style={{ flex: 1, backgroundColor: "#fdfdfd", padding: 16 }}
+      >
+        <ModernHeader
           backgroundColor="#fdfdfd"
           text="November 2019"
           rightIconName="dots-vertical"
@@ -81,8 +83,12 @@ const App = () => {
           leftIconName="arrowleft"
           leftIconType="AntDesign"
           leftIconColor="#984cf8"
-        /> */}
-        <Timeline data={dummyData} />
+        />
+        <Timeline
+          data={dummyData}
+          dashThickness={2}
+          dashLength={dummyData.length}
+        />
       </SafeAreaView>
     </>
   );

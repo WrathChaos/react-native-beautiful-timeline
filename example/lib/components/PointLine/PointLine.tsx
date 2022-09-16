@@ -1,7 +1,7 @@
 import * as React from "react";
-import { StyleProp, Text, TextStyle, View, ViewStyle } from "react-native";
+import { StyleProp, Text, TextStyle, View } from "react-native";
 import moment from "moment";
-import Dash from "react-native-dash";
+import Dash from "react-native-dash-2";
 /**
  * ? Local Imports
  */
@@ -12,13 +12,11 @@ interface PointLineProps {
   date: number;
   length: number;
   isLastMember: boolean;
-  style?: StyleProp<ViewStyle>;
   dayTextStyle?: StyleProp<TextStyle>;
   monthTextStyle?: StyleProp<TextStyle>;
 }
 
 const PointLine: React.FC<PointLineProps> = ({
-  style,
   date,
   isLastMember,
   dayTextStyle,
