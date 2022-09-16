@@ -1,8 +1,7 @@
 import * as React from "react";
 import { StatusBar, SafeAreaView } from "react-native";
-// import Timeline from "react-native-beautiful-timeline";
+import Timeline from "react-native-beautiful-timeline";
 import { ModernHeader } from "@freakycoder/react-native-header-view";
-import Timeline from "./lib/Timeline";
 
 const dummyData = [
   {

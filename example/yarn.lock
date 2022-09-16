@@ -5420,7 +5420,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.5.10", "prop-types@^15.7.2", "prop-types@^15.8.1":
+"prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -5480,10 +5480,15 @@
   "resolved" "https://registry.npmjs.org/react-native-androw/-/react-native-androw-0.0.34.tgz"
   "version" "0.0.34"
 
-"react-native-beautiful-timeline@^0.1.1":
-  "integrity" "sha512-9iVdM8u8W7kbPrl2Q73R1bgd8tj2Mc0Z4aBl0cBPMQlR/7qOp+E/h50LoL7lnBitmZd4C5draysdUnSNDVWWgA=="
-  "resolved" "https://registry.npmjs.org/react-native-beautiful-timeline/-/react-native-beautiful-timeline-0.1.1.tgz"
-  "version" "0.1.1"
+"react-native-beautiful-timeline@^1.0.0":
+  "integrity" "sha512-MrAv0VlgbTuWnLoxnPm6s/5as6hHBnpQNL5mzCn+KiZBK1BQCgBNIfBUoIJaBcC0JIzvz2H4PA3xydIgbOJdmg=="
+  "resolved" "https://registry.npmjs.org/react-native-beautiful-timeline/-/react-native-beautiful-timeline-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "@freakycoder/react-native-helpers" ">= 0.1.0"
+    "moment" ">= 2.24.0"
+    "react-native-androw" ">= 0.0.34"
+    "react-native-dash-2" ">= 0.2.3"
 
 "react-native-codegen@^0.70.4":
   "integrity" "sha512-bPyd5jm840omfx24VRyMP+KPzAefpRDwE18w5ywMWHCWZBSqLn1qI9WgBPnavlIrjTEuzxznWQNcaA26lw8AMQ=="
@@ -5495,18 +5500,10 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
-"react-native-dash-2@^0.2.3":
+"react-native-dash-2@^0.2.3", "react-native-dash-2@>= 0.2.3":
   "integrity" "sha512-qDCqswOHBGQtHl3K8NWRu95zFJyy0tr0YdePgMDRGvAz6P5Q2wEyjSAOPbu1tdaPjbEQK+VJuKQg9mlB+lQHgw=="
   "resolved" "https://registry.npmjs.org/react-native-dash-2/-/react-native-dash-2-0.2.3.tgz"
   "version" "0.2.3"
-
-"react-native-dash@>= 0.0.11":
-  "integrity" "sha512-edgspmVtGVYxOhGs8STCj7+VyQYUR1RkiGHkWDGwiQkEEIFrxWLa3D9ZIrLsm3LKU4XGQ2iEqCv9fJQSeTyAJA=="
-  "resolved" "https://registry.npmjs.org/react-native-dash/-/react-native-dash-0.0.11.tgz"
-  "version" "0.0.11"
-  dependencies:
-    "prop-types" "^15.5.10"
-    "react-native-measureme" "0.0.2"
 
 "react-native-dynamic-vector-icons@^0.2.1", "react-native-dynamic-vector-icons@>= 1.0.0", "react-native-dynamic-vector-icons@>= x.x.x":
   "integrity" "sha512-9ZKBRteUDy2lOYpFO4JJprWN/gJROpdIdY+CjyIb85K9A+i6Cz2Wy0uVAaLbI26qZbxd4X1+B1FMUlswfUEzzg=="
@@ -5517,11 +5514,6 @@
   "integrity" "sha512-k7d+CVh0fs/VntA2WaKD58cFB2rtiSLBHYlciH18ncaT4N/B3A4qOGv9pSCEHfQikELm6vAf98KMbE3c8KnH1A=="
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.2.tgz"
   "version" "0.70.2"
-
-"react-native-measureme@0.0.2":
-  "integrity" "sha512-m7Td7w1pVdIf7a3ejN7K/67AU+TtkZqTt9/ieKamirLRI3fjLToupmOKDtIOU3Y56oKojzTKz1lBbYSPN28HWA=="
-  "resolved" "https://registry.npmjs.org/react-native-measureme/-/react-native-measureme-0.0.2.tgz"
-  "version" "0.0.2"
 
 "react-native-modern-header@^1.0.2":
   "integrity" "sha512-oSQ3VRGV3/52StefbVy2+hMT2z52hHA8WLc7YDFfju6NW/5piK933+YBgJdUX9NwRQHGicQHIYF+FH3ac4A37Q=="

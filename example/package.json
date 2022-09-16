@@ -17,7 +17,7 @@
     "react": "18.2.0",
     "react-native": "0.70.0",
     "react-native-androw": "0.0.34",
-    "react-native-beautiful-timeline": "^0.1.1",
+    "react-native-beautiful-timeline": "^1.0.0",
     "react-native-dash-2": "^0.2.3",
     "react-native-modern-header": "^1.0.2",
     "react-native-dynamic-vector-icons": "^0.2.1",
