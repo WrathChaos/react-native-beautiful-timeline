@@ -41,6 +41,7 @@ const Timeline: React.FC<TimelineProps> = ({
         keyExtractor={(item, index) => index.toString()}
         contentContainerStyle={styles.contentContainerStyle}
         renderItem={({ item, index }) => renderItem(item, index)}
+        {...rest}
       />
     </SafeAreaView>
   );
