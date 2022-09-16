@@ -30,10 +30,8 @@ npm i react-native-beautiful-timeline
 ###### IMPORTANT! You need install them
 
 ```js
-"react": ">= 16.x.x",
-"react-native": ">= 0.55.x",
 "moment": ">= 2.24.0",
-"react-native-dash": ">= 0.0.11",
+"react-native-dash-2": ">= 0.2.3",
 "react-native-androw" : ">= 0.0.34",
 "@freakycoder/react-native-helpers": ">= 0.1.0",
 ```
@@ -133,7 +131,8 @@ Please take a look at above data formatting. Library itself solves everything fo
 - [x] ~~README: Better Example Image~~
 - [x] ~~README: GIF Asset~~
 - [x] ~~README: Data Formatting~~
-- [ ] Configuration: Props
+- [x] ~~Configuration: Props~~
+- [x] ~~Version 1~~
 - [ ] Without Card Feature Data Formatting Implementation (Coming soon!)
 - [ ] Write an article about the lib on Medium
 
