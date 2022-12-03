@@ -1,12 +1,13 @@
-import React from "react";
-import { View, StyleProp, FlatList, ViewStyle } from "react-native";
-import Card from "../Card/Card";
-import PointLine from "../PointLine/PointLine";
-import { ITimeline, ITimelineData } from "../../models";
+/* eslint-disable react/function-component-definition */
+import React from 'react';
+import { View, StyleProp, FlatList, ViewStyle, TextStyle } from 'react-native';
+import Card from '../Card/Card';
+import PointLine from '../PointLine/PointLine';
+import { ITimeline, ITimelineData } from '../../models';
 /**
  * ? Local Imports
  */
-import styles from "./Item.style";
+import styles from './Item.style';
 
 interface ItemProps {
   style?: StyleProp<ViewStyle>;
@@ -14,6 +15,8 @@ interface ItemProps {
   list: ITimelineData[];
   isLastMember: boolean;
   cardStyle?: StyleProp<ViewStyle>;
+  cardTitleTextStyle?: StyleProp<TextStyle>;
+  cardSubtitleTextStyle?: StyleProp<TextStyle>;
 }
 
 const Item: React.FC<ItemProps> = ({
@@ -22,10 +25,22 @@ const Item: React.FC<ItemProps> = ({
   list,
   isLastMember,
   cardStyle,
+  cardTitleTextStyle,
+  cardSubtitleTextStyle,
   ...rest
 }) => {
   const renderItem = (item: ITimelineData, index: number) => {
-    return <Card {...rest} key={index} isCard data={item} style={cardStyle}/>;
+    return (
+      <Card
+        {...rest}
+        key={index}
+        isCard
+        data={item}
+        style={cardStyle}
+        titleTextStyle={cardTitleTextStyle}
+        subtitleTextStyle={cardSubtitleTextStyle}
+      />
+    );
   };
 
   return (

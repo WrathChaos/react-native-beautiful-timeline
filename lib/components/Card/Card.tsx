@@ -1,12 +1,12 @@
-import * as React from "react";
-import { View, Text, StyleProp, ViewStyle, TextStyle } from "react-native";
-import moment from "moment";
-import Androw from "react-native-androw";
+import * as React from 'react';
+import { View, Text, StyleProp, ViewStyle, TextStyle } from 'react-native';
+import moment from 'moment';
+import Androw from 'react-native-androw';
 /**
  * ? Local Imports
  */
-import styles from "./Card.style";
-import { ITimelineData } from "lib/models";
+import { ITimelineData } from 'lib/models';
+import styles from './Card.style';
 
 interface CardProps {
   data: ITimelineData;
@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({
   subtitleTextStyle,
   dateTextStyle,
   style,
-  dateFormat = "DD ddd, HH:mm",
+  dateFormat = 'DD ddd, HH:mm',
 }) => {
   const { title, subtitle, date } = data;
   return (
@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = ({
         styles.container,
         styles.shadowStyle,
         isCard && {
-          backgroundColor: "transparent",
+          backgroundColor: 'transparent',
         },
       ]}
     >
@@ -43,7 +43,7 @@ const Card: React.FC<CardProps> = ({
         style={[
           styles.cardContainer,
           isCard && styles.cardContainerShadowStyle,
-          isCard && style
+          isCard && style,
         ]}
       >
         <View style={styles.cardContainerGlue}>

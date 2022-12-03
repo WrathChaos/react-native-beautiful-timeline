@@ -1,4 +1,4 @@
-import { ViewStyle, StyleSheet, TextStyle } from "react-native";
+import { ViewStyle, StyleSheet, TextStyle } from 'react-native';
 
 interface Style {
   container: ViewStyle;
@@ -13,38 +13,38 @@ interface Style {
 
 export default StyleSheet.create<Style>({
   container: {
-    width: "85%",
+    width: '85%',
     paddingTop: 12,
     paddingLeft: 16,
     paddingBottom: 3,
     borderRadius: 322,
-    alignSelf: "baseline",
-    flexDirection: "column",
+    alignSelf: 'baseline',
+    flexDirection: 'column',
   },
   cardContainerGlue: {
-    width: "100%",
+    width: '100%',
     paddingLeft: 16,
   },
   titleTextStyle: {
-    color: "#556084",
+    color: '#556084',
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   subtitleTextStyle: {
-    color: "#8c93ab",
+    color: '#8c93ab',
     fontSize: 12,
     marginTop: 8,
-    fontWeight: "600",
+    fontWeight: '600',
   },
   dateTextStyle: {
-    color: "#ccc",
+    color: '#ccc',
     fontSize: 10,
     marginLeft: 32,
     marginTop: 0,
   },
   shadowStyle: {
-    backgroundColor: "transparent",
-    shadowColor: "#000",
+    backgroundColor: 'transparent',
+    shadowColor: '#000',
     shadowRadius: 7,
     shadowOpacity: 0.09,
     shadowOffset: {
@@ -58,12 +58,12 @@ export default StyleSheet.create<Style>({
     marginLeft: 24,
     borderRadius: 12,
     paddingBottom: 6,
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   cardContainerShadowStyle: {
     paddingBottom: 12,
-    shadowColor: "#000",
-    backgroundColor: "#fff",
+    shadowColor: '#000',
+    backgroundColor: '#fff',
     shadowRadius: 7,
     shadowOpacity: 0.05,
     shadowOffset: {
