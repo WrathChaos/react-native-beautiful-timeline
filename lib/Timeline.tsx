@@ -1,3 +1,5 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import {
   SafeAreaView,
@@ -22,6 +24,10 @@ interface TimelineProps extends DashProps {
   cardTitleTextStyle?: StyleProp<TextStyle>;
   cardSubtitleTextStyle?: StyleProp<TextStyle>;
   data: ITimeline[];
+  dayTextStyle?: StyleProp<TextStyle>;
+  monthTextStyle?: StyleProp<TextStyle>;
+  pointStyle?: StyleProp<ViewStyle>;
+  dashColor?: string;
 }
 
 const Timeline: React.FC<TimelineProps> = ({
@@ -30,6 +36,10 @@ const Timeline: React.FC<TimelineProps> = ({
   cardStyle,
   cardTitleTextStyle,
   cardSubtitleTextStyle,
+  dayTextStyle,
+  monthTextStyle,
+  pointStyle,
+  dashColor,
   ...rest
 }) => {
   const renderItem = (item: any, index: number) => {
@@ -43,6 +53,10 @@ const Timeline: React.FC<TimelineProps> = ({
         cardStyle={cardStyle}
         cardTitleTextStyle={cardTitleTextStyle}
         cardSubtitleTextStyle={cardSubtitleTextStyle}
+        dayTextStyle={dayTextStyle}
+        monthTextStyle={monthTextStyle}
+        pointStyle={pointStyle}
+        dashColor={dashColor}
       />
     );
   };

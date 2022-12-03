@@ -17,6 +17,10 @@ interface ItemProps {
   cardStyle?: StyleProp<ViewStyle>;
   cardTitleTextStyle?: StyleProp<TextStyle>;
   cardSubtitleTextStyle?: StyleProp<TextStyle>;
+  dayTextStyle?: StyleProp<TextStyle>;
+  monthTextStyle?: StyleProp<TextStyle>;
+  pointStyle?: StyleProp<ViewStyle>;
+  dashColor?: string;
 }
 
 const Item: React.FC<ItemProps> = ({
@@ -27,6 +31,10 @@ const Item: React.FC<ItemProps> = ({
   cardStyle,
   cardTitleTextStyle,
   cardSubtitleTextStyle,
+  dayTextStyle,
+  monthTextStyle,
+  pointStyle,
+  dashColor,
   ...rest
 }) => {
   const renderItem = (item: ITimelineData, index: number) => {
@@ -50,6 +58,10 @@ const Item: React.FC<ItemProps> = ({
         date={data.date}
         length={list.length}
         isLastMember={isLastMember}
+        dayTextStyle={dayTextStyle}
+        monthTextStyle={monthTextStyle}
+        pointStyle={pointStyle}
+        dashColor={dashColor}
       />
       <View style={styles.insideListContainer}>
         <FlatList

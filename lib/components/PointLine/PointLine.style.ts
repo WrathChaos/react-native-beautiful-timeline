@@ -1,4 +1,4 @@
-import { ViewStyle, StyleSheet, TextStyle } from "react-native";
+import { ViewStyle, StyleSheet, TextStyle } from 'react-native';
 
 interface Style {
   container: ViewStyle;
@@ -10,30 +10,30 @@ interface Style {
 
 export default StyleSheet.create<Style>({
   container: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginLeft: 24,
   },
   containerGlue: {
     marginTop: -7,
     marginRight: 12,
-    alignItems: "center",
-    flexDirection: "column",
+    alignItems: 'center',
+    flexDirection: 'column',
   },
   dividerStyle: {
     paddingTop: 12,
     marginLeft: 12,
   },
   dayTextStyle: {
-    color: "#984cf8",
-    fontWeight: "700",
+    color: '#1a91ff',
+    fontWeight: '700',
   },
   monthTextStyle: {
-    color: "#ded9e6",
+    color: '#ded9e6',
   },
 });
 
 export const _dashStyle = (length: number): ViewStyle => ({
   width: 1,
   height: 110 * length,
-  flexDirection: "column",
+  flexDirection: 'column',
 });

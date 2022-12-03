@@ -1,4 +1,4 @@
-import { ViewStyle, StyleSheet } from "react-native";
+import { ViewStyle, StyleSheet } from 'react-native';
 
 interface Style {
   innerContainer: ViewStyle;
@@ -12,14 +12,14 @@ export default StyleSheet.create<Style>({
     left: -4,
     width: 10,
     height: 10,
-    backgroundColor: "#984cf8",
+    backgroundColor: '#1a91ff',
     borderRadius: 30,
-    position: "absolute",
-    alignItems: "center",
-    justifyContent: "center",
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   shadowStyle: {
-    shadowColor: "#984cf8",
+    shadowColor: '#1a91ff',
     shadowRadius: 8,
     shadowOpacity: 0.3,
     shadowOffset: {
@@ -32,7 +32,7 @@ export default StyleSheet.create<Style>({
     height: 20,
     borderWidth: 1,
     borderRadius: 16,
-    borderColor: "rgba(152, 76, 248, 0.1)",
-    backgroundColor: "rgba(152, 76, 248, 0.05)",
+    borderColor: 'rgba(152, 76, 248, 0.1)',
+    backgroundColor: 'rgba(152, 76, 248, 0.05)',
   },
 });
