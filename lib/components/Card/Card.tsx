@@ -16,6 +16,7 @@ interface CardProps {
   titleTextStyle?: StyleProp<TextStyle>;
   subtitleTextStyle?: StyleProp<TextStyle>;
   dateTextStyle?: StyleProp<TextStyle>;
+  cardStyle?: StyleProp<ViewStyle>;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -24,6 +25,7 @@ const Card: React.FC<CardProps> = ({
   titleTextStyle,
   subtitleTextStyle,
   dateTextStyle,
+  style,
   dateFormat = "DD ddd, HH:mm",
 }) => {
   const { title, subtitle, date } = data;
@@ -41,6 +43,7 @@ const Card: React.FC<CardProps> = ({
         style={[
           styles.cardContainer,
           isCard && styles.cardContainerShadowStyle,
+          isCard && style
         ]}
       >
         <View style={styles.cardContainerGlue}>

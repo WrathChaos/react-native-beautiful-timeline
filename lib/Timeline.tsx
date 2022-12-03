@@ -12,12 +12,14 @@ type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
 
 interface TimelineProps extends DashProps {
   timelineStyle?: CustomStyleProp;
+  cardStyle?: CustomStyleProp;
   data: ITimeline[];
 }
 
 const Timeline: React.FC<TimelineProps> = ({
   data,
   timelineStyle,
+  cardStyle,
   ...rest
 }) => {
   const renderItem = (item: any, index: number) => {
@@ -28,6 +30,7 @@ const Timeline: React.FC<TimelineProps> = ({
         data={item}
         list={item.data}
         isLastMember={isLastMember}
+        cardStyle={cardStyle}
       />
     );
   };
